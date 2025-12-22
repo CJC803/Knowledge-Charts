@@ -1,0 +1,16 @@
+[
+    {
+        "route": "28K",
+        "avgSPM": 6.8,
+        "avgNDPPH": 15.4,
+        "avgMiles": 65,
+        "avgStops": 100
+    },
+    {
+        "route": "14B",
+        "avgSPM": 7.2,
+        "avgNDPPH": 16.1,
+        "avgMiles": 62,
+        "avgStops": 95
+    }
+]
