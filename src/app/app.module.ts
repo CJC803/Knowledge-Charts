@@ -1,23 +1,28 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { RouterModule, Routes } from '@angular/router';
+
+import { KnowledgeChartsComponent } from './components/knowledge-charts/knowledge-charts.component';
 import { RouteBaselineComponent } from './components/route-baseline/route-baseline.component';
 import { DriverBaselineComponent } from './components/driver-baseline/driver-baseline.component';
 import { ComparisonStaffingComponent } from './components/comparison-staffing/comparison-staffing.component';
 
+const routes: Routes = [
+  { path: '', redirectTo: 'knowledge-charts', pathMatch: 'full' },
+  {
+    path: 'knowledge-charts',
+    component: KnowledgeChartsComponent,
+    children: [
+      { path: '', redirectTo: 'routes', pathMatch: 'full' },
+      { path: 'routes', component: RouteBaselineComponent },
+      { path: 'drivers', component: DriverBaselineComponent },
+      { path: 'comparison', component: ComparisonStaffingComponent }
+    ]
+  },
+  { path: '**', redirectTo: 'knowledge-charts' }
+];
+
 @NgModule({
-  declarations: [
-    AppComponent,
-    RouteBaselineComponent,
-    DriverBaselineComponent,
-    ComparisonStaffingComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
-export class AppModule { }
+export class AppRoutingModule {}
