@@ -1,1 +1,36 @@
+<nav class="main-nav">
+  <ul>
+    <li>
+      <a
+        routerLink="/knowledge-charts/routes"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        Route Baseline
+      </a>
+    </li>
+
+```
+<li>
+  <a
+    routerLink="/knowledge-charts/drivers"
+    routerLinkActive="active"
+  >
+    Driver Baseline
+  </a>
+</li>
+
+<li>
+  <a
+    routerLink="/knowledge-charts/comparison"
+    routerLinkActive="active"
+  >
+    Comparison & Staffing
+  </a>
+</li>
+```
+
+  </ul>
+</nav>
+
 <router-outlet></router-outlet>
