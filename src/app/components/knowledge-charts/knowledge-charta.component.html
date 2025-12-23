@@ -1,0 +1,13 @@
+<div class="kc-shell">
+  <h2 class="kc-title">Knowledge Charts</h2>
+
+  <nav class="kc-tabs">
+    <a routerLink="routes" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Routes</a>
+    <a routerLink="drivers" routerLinkActive="active">Drivers</a>
+    <a routerLink="comparison" routerLinkActive="active">Comparison</a>
+  </nav>
+
+  <div class="kc-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
