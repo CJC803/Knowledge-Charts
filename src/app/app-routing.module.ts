@@ -8,7 +8,6 @@ import { ComparisonStaffingComponent } from './components/comparison-staffing/co
 
 const routes: Routes = [
   { path: '', redirectTo: 'knowledge-charts', pathMatch: 'full' },
-
   {
     path: 'knowledge-charts',
     component: KnowledgeChartsComponent,
@@ -19,8 +18,6 @@ const routes: Routes = [
       { path: 'comparison', component: ComparisonStaffingComponent }
     ]
   },
-
-  // fallback
   { path: '**', redirectTo: 'knowledge-charts' }
 ];
 
